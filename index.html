@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teminder</title>
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#orar">Orar</a></li>
+                <li><a href="#homework-tomorrow">Homework for Tomorrow</a></li>
+                <li><a href="#subject-homework">Subject Homework</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <section class="hero">
+        <div class="content">
+            <h1>Teminder</h1>
+            <p>Teme Reminder!</p>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-school"></i>
+            <i class="fa-solid fa-book"></i>
+            <i class="fa-solid fa-pencil"></i>
+            <i class="fa-solid fa-laptop"></i>
+            <i class="fa-solid fa-calendar"></i>
+            
+            <div class="arrow-down">
+                <a href="#about">
+                    <img src="https://th.bing.com/th/id/R.61784c37a2e26bd4afa05c2777d50907?rik=dRxz2txHboft%2bA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fdown-arrow-png-down-icon-1600.png&ehk=AtCYQs09Cv%2b2Br%2fb7%2bOJShaXA8L4Iwcv6m%2fWOcZI4f0%3d&risl=&pid=ImgRaw&r=0" alt="Down Arrow">
+                </a>
+            </div>
+            
+            
+        </section>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                
+                const handleIntersection = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                            observer.unobserve(entry.target); 
+                        }
+                    });
+                };
+            
+                const observer = new IntersectionObserver(handleIntersection, {
+                    threshold: 0.1 
+                });
+            
+                document.querySelectorAll('body > *').forEach(element => {
+                    observer.observe(element);
+                });
+            });
+            </script>
+            
+
+
+
+    <section id="about">
+        <div class="typewriter">
+            <h1>Welcome to Teminder!</h1>
+        </div>
+        
+        <h2>Despre Teminder</h2>
+        <p>Nu ai scris ce avem pentru acasa? Nici o problema, Teminder mereu scrie ce avem pe acasa!</p>
+       
+     <li>Acest site poate avea multe erori/probleme</li>
+     <li>Temele p/u acasa sunt schimbate in fiecare zi de scoala la ora 3-4</li>
+     <li>Versiunea site-ului : 1.0</li>
+
+     <div id="current-date" class="date-display"></div>
+     <div id="countdown-timer" class="countdown-timer"></div>
+        
+        <div class="buttons">
+            <a href="#orar" class="button">Orar</a>
+            <a href="#homework-tomorrow" class="button">P/u acasa maine</a>
+            <a href="#subject-homework" class="button">P/u acasa toate obiectele</a>
+        </div>
+    </section>
+        <section id="orar">
+            <div id="orar-teme">
+                <div class="orar-nav">
+                    <button class="prev-day">❮</button>
+                    <h2 id="current-day">LUNI</h2>
+                    <button class="next-day">❯</button>
+                </div>
+                <div class="orar-content">
+                    <ul id="orar-list">
+                        <li>1. L. rusă / Cabinet : 122</li>
+                        <li>2. Ed. p/u societate / Cabinet : 223</li>
+                        <li>3. Chimia / Cabinet : 325</li>
+                        <li>4. Fizica / Cabinet : 325 </li>
+                        <li>5. L. română / Cabinet : 329</li>
+                        <li>6. L. română / Cabinet : 329 </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="orar-sunete">
+                <h2>Orarul Sunetelor</h2>
+                <ul>
+                    <li>Prima lectie: 8:15-9:00 AM</li>
+                    <li>A doua lectie: 9:10-9:55 AM</li>
+                    <li>A treia lectie: 10:05-10:50 AM</li>
+                    <li>A patra lectie: 11:10-11:55 AM</li>
+                    <li>A cincea lectie: 12:05-12:50 AM</li>
+                    <li>A sasea lectie: 13:00-13:45 PM</li>
+                    <h3>Noi nu avem mai mult de 6 lectii :))</h3>
+                </ul>
+            </div>
+        </section>
+        <script>
+            const days = {
+                "LUNI": [
+                    "1. L. rusă / Cabinet : 122",
+                    "2. Ed. p/u societate / Cabinet : 223",
+                    "3. Chimia / Cabinet : 325",
+                    "4. Fizica / Cabinet : 325",
+                    "5. L. română / Cabinet : 329",
+                    "6. L. română / Cabinet : 329"
+                ],
+                "MARTI": [
+                    "1. Informatica / Cabinet : 222/235",
+                    "2. Matematica / Cabinet : 124",
+                    "3. Matematica aplicată / Cabinet : 222/235",
+                    "4. Limba engleza / Cabinet : 139/329",
+                    "5. Geografia / Cabinet : 125",
+                    "6. Ed fizică"
+                ],
+                "MIERCURI": [
+                    "1. Biologia / Cabinet : 324",
+                    "2. Fizica / Cabinet : 325",
+                    "3. Ed fizică",
+                    "4. Matematica / Cabinet : 121",
+                    "5. Ed tehnologică",
+                    "6. L. română / Cabinet : 329"
+                ],
+                "JOI": [
+                    "1. Istoria / Cabinet : 121",
+                    "2. L. română / Cabinet : 329",
+                    "3. Limba engleză / Cabinet : 139/329",
+                    "4. Matematica / Cabinet : 227",
+                    "5. Chimia / Cabinet : 325"
+                ],
+                "VINERI": [
+                    "1. L. rusă / Cabinet : 224",
+                    "2. Biologia / Cabinet : 324",
+                    "3. Matematica / Cabinet : 327",
+                    "4. L. română / Cabinet : 329",
+                    "5. Istoria / Cabinet : 121",
+                    "6. Dezv. Personala / Cabinet : 329"
+                ]
+            };
+        
+            let currentDayIndex = 0;
+            const dayNames = Object.keys(days);
+        
+            function updateDay() {
+                const currentDay = dayNames[currentDayIndex];
+                document.getElementById('current-day').textContent = currentDay;
+                const list = document.getElementById('orar-list');
+                
+                
+                list.classList.remove('show');
+                setTimeout(() => {
+                    list.innerHTML = days[currentDay].map(item => `<li>${item}</li>`).join('');
+                    list.classList.add('show');
+                }, 300); 
+            }
+        
+            document.querySelector('.prev-day').addEventListener('click', function() {
+                currentDayIndex = (currentDayIndex - 1 + dayNames.length) % dayNames.length;
+                updateDay();
+            });
+        
+            document.querySelector('.next-day').addEventListener('click', function() {
+                currentDayIndex = (currentDayIndex + 1) % dayNames.length;
+                updateDay();
+            });
+        
+          
+            updateDay();
+        </script>
+        
+        
+    
+    
+
+        <section id="homework-tomorrow">
+            <h2>Pentru acasa Maine</h2>
+            <p id="homework-date">Maine este: [Luni]</p>
+            <ul>
+                <li><strong>1. L.Rusa</strong> Poezie-Pagina 6 de invatat</li>
+                <li><strong>2. Ed.civica</strong> Discurs despre Legea legala si Legea morala</li>
+                <li><strong>3. Chimia</strong> De transcris in caiet poza de pe viber (trimisa pe 12/09)</li>
+                <li><strong>4. Fizica</strong> Comunicare despre Periscop</li>
+                <li><strong>5. L.Romana</strong> Ex 1 p 7  Ex 2 p 7 de jos</li>
+                <li><strong>6. L.Romana</strong> ^^^</li>
+            </ul>
+        </section>
+        
+        
+
+        <section id="subject-homework">
+            <h2>Pentru Acasa - Mereu</h2>
+            <p>Tema p/u acasa la fiecare obiect</p>
+            <li>! ULTIMA DATA ACTUALIZAT - 15/09/2024 !</li>
+            <li> Datele vor fi actualizate din nou Luni la ora 3</li>
+            <ul>
+                <li><strong>Matematica:</strong> Caietul de teste , testele 16,18,24 de facut ex 5.</li>
+                <li><strong>L. Romana:</strong> Ex 1 p 7  Ex 2 p 7 de jos</li>
+                <li><strong>L. Rusa:</strong> Poezie-Pagina 6 de invatat</li>
+                <li><strong>L. Engleza:</strong> Grupa D.Natalia: ex 4 p 10 OR 10 p 12  |  Grupa D.Angela nu stiu , sorry.</li>
+                <li><strong>Istorie:</strong> Romania in primul razboi mondial, p 13  / axa </li>
+                <li><strong>Biologie:</strong> Continuam desenul din manualul online p 8 / Descrierea nustiu de unde inca, sorry.</li>
+                <li><strong>Chimie:</strong> De transcris in caiet poza de pe viber (trimisa pe 12/09)</li>
+                <li><strong>Fizica:</strong> Comunicare despre Periscop</li>
+                <li><strong>Geografie:</strong> Ex 4,5 p 14</li>
+                <li><strong>Mate App.:</strong> De luat caietul de teste</li>
+                <li><strong>Ed. fizica:</strong> Forma sportiva</li>
+                <li><strong>Ed. teh.:</strong> Baieti: nimic / Fete: nu stiu, sorry.</li>
+                <li><strong>Ed. Civica:</strong> Discurs despre Legea legala si Legea morala</li>
+            </ul>
+        </section>
+        
+
+    <footer id="contact">
+        <p>Daca aveti idei sau intrebari pentru acest site , contactatine pe viber! ')</p>
+       
+    </footer>
+    
+      
+    <script src="heh.js"></script>
+</body>
+</html>

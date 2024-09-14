@@ -1,0 +1,706 @@
+/* General reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #1a1a1a; 
+    padding: 20px 0;
+    border-bottom: 2px solid #333; 
+}
+
+header nav ul {
+    list-style: none;
+    display: none; /
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #333; 
+    color: #e0e0e0;
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333; 
+    color: #e0e0e0;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero .content h1 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 4rem;
+    color: #e0e0e0; 
+    margin-bottom: 10px;
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    color: #b0b0b0; 
+}
+
+
+.icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icons i {
+    font-size: 5rem; 
+    color: #e0e0e0; 
+    position: absolute;
+    transform-origin: center;
+    transition: color 0.3s ease; 
+}
+
+
+.icons i:nth-child(1) {
+    top: 10%;
+    left: 7%;
+    transform: rotate(15deg);
+}
+
+.icons i:nth-child(2) {
+    top: 10%;
+    left: 47%;
+    transform: rotate(-10deg);
+}
+
+.icons i:nth-child(3) {
+    top: 10%;
+    left: 87%;
+    transform: rotate(25deg);
+}
+
+.icons i:nth-child(4) {
+    top: 50%;
+    left: 7%;
+    transform: rotate(-20deg);
+}
+
+
+
+.icons i:nth-child(5) {
+    top: 50%;
+    left: 87%;
+    transform: rotate(30deg);
+}
+
+
+/* Squash and color change effect on hover */
+.icons i:hover {
+    animation: squashColorChange 1.5s ease-in-out infinite; /* Continuous animation on hover */
+}
+
+/* Squash and color change animation keyframes */
+@keyframes squashColorChange {
+    0% { transform: scale(1) rotate(0deg); color: #e0e0e0; } 
+    25% { transform: scale(1.05, 0.95) rotate(0deg); color: #cccccc; } 
+    50% { transform: scale(1) rotate(0deg); color: #333333; } 
+    75% { transform: scale(1.05, 0.95) rotate(0deg); color: #cccccc; } 
+    100% { transform: scale(1) rotate(0deg); color: #e0e0e0; } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Styles */
+section {
+    padding: 60px 10%;
+    margin: 20px auto;
+    background-color: #1a1a1a; 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+section:nth-of-type(even) {
+    background-color: #121212; 
+}
+
+h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0; 
+}
+
+p {
+    font-size: 1.1rem;
+    color: #b0b0b0; 
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+}
+
+#about .button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #333; 
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .button:hover {
+    background-color: #444; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+/* Homework Sections */
+#homework-tomorrow,
+#subject-homework {
+    background-color: #1a1a1a; 
+    color: #e0e0e0;
+}
+
+#homework-tomorrow p,
+#subject-homework p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #333; 
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+ul li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0; 
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ccc; 
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+
+/* Arrow container */
+.arrow-down {
+    position: fixed;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Style for the arrow image */
+.arrow-img {
+    width: 120px; /* Make the arrow larger */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    filter: brightness(0) invert(1); 
+}
+
+/* Hover effect for the arrow */
+.arrow-img:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Scrollbar styles for webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; 
+    border-radius: 10px; 
+    border: 2px solid #333; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Lighter color on hover */
+}
+
+/* Scrollbar styles for Firefox */
+* {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #555 #333; /* Thumb and track color */
+}
+
+
+/* Floating animation keyframes */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply floating animation to the arrow */
+.arrow-down img {
+    animation: float 3s ease-in-out infinite;
+    width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's a block element to manage alignment */
+    margin: 0 auto; /* Center the arrow horizontally */
+}
+
+/* Ensure link styling does not affect the animation */
+.arrow-down a {
+    display: block;
+    text-decoration: none; /* Remove underline from link */
+}
+
+
+
+/* Initial state for fade-in effect */
+body > * {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+/* Final state for fade-in effect */
+body > *.fade-in {
+    opacity: 1;
+}
+section:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+
+
+ul li {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+
+
+.orar-content {
+    position: relative;
+    overflow: hidden;
+}
+
+#orar-list {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#orar-list.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Base styles for mobile */
+body {
+    font-size: 16px; /* Adjust base font size */
+}
+
+#orar-teme, #orar-sunete {
+    flex: 1 1 100%; /* Make sections full-width on small screens */
+    min-width: 100%; /* Ensure they take full width */
+}
+
+.orar-nav {
+    flex-direction: column; /* Stack buttons and heading vertically */
+}
+
+button.prev-day, button.next-day {
+    width: 100%; /* Make buttons full-width */
+    margin-bottom: 10px; /* Add space between buttons and heading */
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+
+    #orar-teme, #orar-sunete {
+        flex: 1 1 48%; /* Adjust flex to make sections side-by-side */
+    }
+
+    .orar-nav {
+        flex-direction: row; /* Align buttons and heading horizontally */
+    }
+
+    button.prev-day, button.next-day {
+        width: auto; /* Adjust button width for larger screens */
+    }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px; /* Larger font size for desktops */
+    }
+
+    #orar-teme, #orar-sunete {
+        flex: 1 1 48%; /* Keep side-by-side layout */
+    }
+}
+
+
+/* Container for Orar sections */
+#orar {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Space between sections */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+/* Styling for Orar Temes section */
+#orar-teme {
+    flex: 1; /* Allow the section to grow */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    min-width: 45%; /* Ensure it takes at least 45% of the container width */
+}
+
+#orar-teme .orar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#orar-teme .orar-nav button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#orar-teme .orar-nav button:hover {
+    background-color: #555;
+}
+
+#orar-teme #current-day {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 1.8rem;
+    color: #e0e0e0;
+}
+
+#orar-teme .orar-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#orar-teme .orar-content ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+#orar-teme .orar-content ul li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+/* Styling for Orar Sunete section */
+#orar-sunete {
+    flex: 1; /* Allow the section to grow */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    min-width: 45%; /* Ensure it takes at least 45% of the container width */
+}
+
+#orar-sunete h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+#orar-sunete ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#orar-sunete ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+#orar-sunete ul li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+
+
+/* General styles for larger screens */
+#orar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#orar-teme,
+#orar-sunete {
+    flex: 1;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    min-width: 45%; /* Ensure both sections take half the width */
+    margin-bottom: 20px;
+}
+
+#orar h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 1.8rem;
+    color: #e0e0e0;
+}
+
+#orar p {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+}
+
+#orar h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+#orar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#orar ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+#orar ul li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    #orar {
+        display: block;
+    }
+
+    #orar-teme,
+    #orar-sunete {
+        min-width: 100%; /* Make each section take full width */
+        margin-bottom: 20px;
+    }
+
+    #orar-teme {
+        margin-bottom: 10px; /* Add some space between the sections */
+    }
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero .content {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller text for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller text for mobile */
+    }
+
+    .hero .icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero .icons i {
+        font-size: 1.5rem; /* Smaller icons for mobile */
+    }
+
+    .hero .arrow-down {
+        margin-top: 20px;
+    }
+
+    .hero .arrow-down img {
+        width: 30px; /* Smaller arrow for mobile */
+    }
+}
+
+
+.typewriter h1 {
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    border-right: 0.15em solid #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end) 1s 1 normal both,
+               blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #e0e0e0; }
+}
+
+.date-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#countdown-timer {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-top: 20px;
+   
+    padding: 10px;
+    border-radius: 8px;
+    
+}
