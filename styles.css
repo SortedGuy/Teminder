@@ -664,7 +664,7 @@ button.prev-day, button.next-day {
 .typewriter h1 {
     display: inline;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-size: 1rem;
     border-right: 0.15em solid #e0e0e0;
     white-space: nowrap;
     overflow: hidden;
