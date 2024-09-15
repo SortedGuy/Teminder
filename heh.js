@@ -12,8 +12,8 @@ function updateCountdown() {
     const now = new Date();
     let targetTime = new Date();
     
-    // Set the target time to 4 PM today
-    targetTime.setHours(16, 0, 0, 0);
+    // Set the target time to 3 PM today
+    targetTime.setHours(15, 0, 0, 0);
     
     // If the target time is in the past, set it to 4 PM tomorrow
     if (now > targetTime) {
