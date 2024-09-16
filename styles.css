@@ -122,12 +122,12 @@ header nav ul li a:hover {
 }
 
 
-/* Squash and color change effect on hover */
+/* ceva cu hover */
 .icons i:hover {
-    animation: squashColorChange 1.5s ease-in-out infinite; /* Continuous animation on hover */
+    animation: squashColorChange 1.5s ease-in-out infinite; 
 }
 
-/* Squash and color change animation keyframes */
+/* Squash si culoare */
 @keyframes squashColorChange {
     0% { transform: scale(1) rotate(0deg); color: #e0e0e0; } 
     25% { transform: scale(1.05, 0.95) rotate(0deg); color: #cccccc; } 
