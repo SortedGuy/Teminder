@@ -122,12 +122,12 @@ header nav ul li a:hover {
 }
 
 
-/* ceva cu hover */
+/* Squash and color change effect on hover */
 .icons i:hover {
-    animation: squashColorChange 1.5s ease-in-out infinite; 
+    animation: squashColorChange 1.5s ease-in-out infinite; /* Continuous animation on hover */
 }
 
-/* Squash si culoare */
+/* Squash and color change animation keyframes */
 @keyframes squashColorChange {
     0% { transform: scale(1) rotate(0deg); color: #e0e0e0; } 
     25% { transform: scale(1.05, 0.95) rotate(0deg); color: #cccccc; } 
@@ -703,4 +703,177 @@ button.prev-day, button.next-day {
     padding: 10px;
     border-radius: 8px;
     
+}
+
+
+/* Bookmark icon style */
+.bookmark-popup {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    z-index: 100;
+    width: 50px;
+    height: 150px;
+    background-color: #05020281;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+/* Adjust width on hover for larger screens */
+.bookmark-popup:hover {
+    width: 250px;
+}
+
+/* New label text on the side */
+.bookmark-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Inside content (hidden until hover) */
+.bookmark-content {
+    display: none;
+    color: white;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.bookmark-popup:hover .bookmark-content {
+    display: block;
+}
+
+.bookmark-popup:hover .bookmark-label {
+    display: none;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    bottom: 10px; /* Adjusted to align with the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    background-color: #ff4d4d; /* Red background */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bookmark-popup {
+        width: 40px;
+        height: 120px;
+    }
+
+    .bookmark-popup:hover {
+        width: 200px;
+    }
+
+    .bookmark-label {
+        font-size: 14px;
+    }
+
+    .close-btn {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+
+
+
+/* General styling for the section */
+#test-help {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+#test-help h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.exercise {
+    margin-bottom: 20px;
+}
+
+.exercise h2 {
+    font-size: 20px;
+    color: #f39c12;
+}
+
+.exercise-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.exercise-content {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure long text wraps within its container */
+}
+
+.math-expression {
+    color: #f39c12;
+    font-weight: bold;
+    display: block; /* Ensure math expressions are on their own line */
+    margin: 10px 0; /* Add margin to separate from other content */
+    overflow-wrap: break-word; /* Break long math expressions if needed */
+}
+
+.exercise-explanation {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long text wraps within its container */
+}
+
+@media (max-width: 768px) {
+    #test-help {
+        padding: 10px;
+    }
+
+    #test-help h1 {
+        font-size: 20px;
+    }
+
+    .exercise h2 {
+        font-size: 18px;
+    }
+
+    .exercise-description,
+    .exercise-content,
+    .exercise-explanation {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .math-expression {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
 }
