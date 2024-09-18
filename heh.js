@@ -29,6 +29,29 @@ function updateCountdown() {
         `Timp ramas pana la urmatoarea actualizare: ${hours}h ${minutes}m ${seconds}s`;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('popup');
+    const closeButton = document.querySelector('.close-btn'); // Selecting by class
+
+    // Show the popup when the page loads if it hasn't been closed before
+    if (!localStorage.getItem('popupClosed')) {
+        popup.style.display = 'block';
+    }
+
+    closeButton.addEventListener('click', function() {
+        // Hide the popup
+        popup.style.display = 'none';
+        // Save the state in localStorage
+        localStorage.setItem('popupClosed', 'true');
+        // Scroll to the math section
+        const mathSection = document.getElementById('test-help');
+        if (mathSection) {
+            mathSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+
 // Update countdown every second
 setInterval(updateCountdown, 1000);
 
