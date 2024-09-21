@@ -736,7 +736,7 @@ button.prev-day, button.next-day {
     transform: rotate(-90deg);
     transform-origin: left top;
     font-size: 18px;
-    color: white;
+    color: rgb(228, 57, 57);
     font-weight: bold;
     letter-spacing: 2px;
 }
