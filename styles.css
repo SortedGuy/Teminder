@@ -194,7 +194,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* About Section */
+/* about section */
 #about {
     text-align: center;
 }
@@ -222,7 +222,7 @@ p {
 
 
 
-/* Homework Sections */
+/* homework sections */
 #homework-tomorrow,
 #subject-homework {
     background-color: #1a1a1a; 
@@ -282,7 +282,7 @@ body {
 
 
 
-/* Arrow container */
+/* arrow  */
 .arrow-down {
     position: fixed;
     bottom: 50px; 
@@ -291,22 +291,22 @@ body {
     z-index: 1000;
 }
 
-/* Style for the arrow image */
+/* style arrow image */
 .arrow-img {
-    width: 120px; /* Make the arrow larger */
-    height: auto; /* Maintain aspect ratio */
-    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    width: 120px; 
+    height: auto;
+    transition: opacity 0.3s ease; 
     filter: brightness(0) invert(1); 
 }
 
-/* Hover effect for the arrow */
+/* hover effect arrow */
 .arrow-img:hover {
-    opacity: 0.8; /* Slightly transparent on hover */
+    opacity: 0.8; 
 }
 
-/* Scrollbar styles for webkit browsers (Chrome, Safari) */
+/* scrollbar  (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -316,57 +316,57 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #777; /* Lighter color on hover */
+    background-color: #777; 
 }
 
-/* Scrollbar styles for Firefox */
+/* scrollbar Firefox */
 * {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: #555 #333; /* Thumb and track color */
+    scrollbar-width: thin; 
+    scrollbar-color: #555 #333; 
 }
 
 
-/* Floating animation keyframes */
+/* floating animation keyframe */
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 
-/* Apply floating animation to the arrow */
+/*  floating animation arrow */
 .arrow-down img {
     animation: float 3s ease-in-out infinite;
-    width: 120px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure it's a block element to manage alignment */
-    margin: 0 auto; /* Center the arrow horizontally */
+    width: 120px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
-/* Ensure link styling does not affect the animation */
+
 .arrow-down a {
     display: block;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none; 
 }
 
 
 
-/* Initial state for fade-in effect */
+/*  fade-in */
 body > * {
     opacity: 0;
     transition: opacity 1.5s ease-out;
 }
 
-/* Final state for fade-in effect */
+/*  fade-in  */
 body > *.fade-in {
     opacity: 1;
 }
 section:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
-    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); 
+    transform: translateY(-5px); 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Pulse animation keyframes */
+/* Pulse  */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -403,72 +403,72 @@ ul li:hover {
     transform: translateY(0);
 }
 
-/* Base styles for mobile */
+/* mobile */
 body {
-    font-size: 16px; /* Adjust base font size */
+    font-size: 16px; 
 }
 
 #orar-teme, #orar-sunete {
-    flex: 1 1 100%; /* Make sections full-width on small screens */
-    min-width: 100%; /* Ensure they take full width */
+    flex: 1 1 100%; 
+    min-width: 100%; 
 }
 
 .orar-nav {
-    flex-direction: column; /* Stack buttons and heading vertically */
+    flex-direction: column; 
 }
 
 button.prev-day, button.next-day {
-    width: 100%; /* Make buttons full-width */
-    margin-bottom: 10px; /* Add space between buttons and heading */
+    width: 100%; 
+    margin-bottom: 10px; 
 }
 
-/* Styles for tablets and larger screens */
+
 @media (min-width: 768px) {
     body {
-        font-size: 18px; /* Increase font size for larger screens */
+        font-size: 18px; 
     }
 
     #orar-teme, #orar-sunete {
-        flex: 1 1 48%; /* Adjust flex to make sections side-by-side */
+        flex: 1 1 48%; 
     }
 
     .orar-nav {
-        flex-direction: row; /* Align buttons and heading horizontally */
+        flex-direction: row; 
     }
 
     button.prev-day, button.next-day {
-        width: auto; /* Adjust button width for larger screens */
+        width: auto; 
     }
 }
 
-/* Styles for desktops and larger screens */
+
 @media (min-width: 1024px) {
     body {
-        font-size: 20px; /* Larger font size for desktops */
+        font-size: 20px; 
     }
 
     #orar-teme, #orar-sunete {
-        flex: 1 1 48%; /* Keep side-by-side layout */
+        flex: 1 1 48%; 
     }
 }
 
 
-/* Container for Orar sections */
+/* orar sections */
 #orar {
     display: flex;
-    justify-content: space-between; /* Space between items */
-    gap: 20px; /* Space between sections */
-    margin-bottom: 20px; /* Space below the container */
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-bottom: 20px; 
 }
 
-/* Styling for Orar Temes section */
+/* orar teme */
 #orar-teme {
-    flex: 1; /* Allow the section to grow */
+    flex: 1; 
     padding: 20px;
     background-color: #333;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    min-width: 45%; /* Ensure it takes at least 45% of the container width */
+    min-width: 45%; 
 }
 
 #orar-teme .orar-nav {
@@ -513,17 +513,17 @@ button.prev-day, button.next-day {
 }
 
 #orar-teme .orar-content ul li:last-child {
-    border-bottom: none; /* Remove border from last item */
+    border-bottom: none; 
 }
 
-/* Styling for Orar Sunete section */
+/* orar sunete */
 #orar-sunete {
-    flex: 1; /* Allow the section to grow */
+    flex: 1; 
     padding: 20px;
     background-color: #333;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    min-width: 45%; /* Ensure it takes at least 45% of the container width */
+    min-width: 45%; 
 }
 
 #orar-sunete h2 {
@@ -547,7 +547,7 @@ button.prev-day, button.next-day {
 }
 
 #orar-sunete ul li:last-child {
-    border-bottom: none; /* Remove border from last item */
+    border-bottom: none; 
 }
 
 
@@ -567,7 +567,7 @@ button.prev-day, button.next-day {
     background-color: #333;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    min-width: 45%; /* Ensure both sections take half the width */
+    min-width: 45%; 
     margin-bottom: 20px;
 }
 
@@ -602,7 +602,7 @@ button.prev-day, button.next-day {
 }
 
 #orar ul li:last-child {
-    border-bottom: none; /* Remove border from last item */
+    border-bottom: none; 
 }
 
 /* Mobile styles */
@@ -613,12 +613,12 @@ button.prev-day, button.next-day {
 
     #orar-teme,
     #orar-sunete {
-        min-width: 100%; /* Make each section take full width */
+        min-width: 100%; 
         margin-bottom: 20px;
     }
 
     #orar-teme {
-        margin-bottom: 10px; /* Add some space between the sections */
+        margin-bottom: 10px; 
     }
 }
 
@@ -635,11 +635,11 @@ button.prev-day, button.next-day {
     }
 
     .hero h1 {
-        font-size: 2rem; /* Smaller text for mobile */
+        font-size: 2rem; 
     }
 
     .hero p {
-        font-size: 1rem; /* Smaller text for mobile */
+        font-size: 1rem; 
     }
 
     .hero .icons {
@@ -648,7 +648,7 @@ button.prev-day, button.next-day {
     }
 
     .hero .icons i {
-        font-size: 1.5rem; /* Smaller icons for mobile */
+        font-size: 1.5rem; 
     }
 
     .hero .arrow-down {
@@ -656,7 +656,7 @@ button.prev-day, button.next-day {
     }
 
     .hero .arrow-down img {
-        width: 30px; /* Smaller arrow for mobile */
+        width: 30px; 
     }
 }
 
@@ -704,6 +704,7 @@ button.prev-day, button.next-day {
     border-radius: 8px;
     
 }
+
 
 
 /* Bookmark icon style */
@@ -876,4 +877,126 @@ button.prev-day, button.next-day {
     .math-expression {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
+}
+
+/* Collapsible Button Style */
+.collapsible {
+    background-color: #5a5a5a; /* Slightly lighter background */
+    color: white;              /* White text */
+    cursor: pointer;           /* Pointer cursor on hover */
+    padding: 8px 16px;        /* Padding for the button */
+    width: auto;               /* Auto width for smaller buttons */
+    margin: 10px auto;        /* Center the button with margin */
+    border: none;             /* No border */
+    text-align: center;       /* Center text */
+    outline: none;            /* No outline */
+    font-size: 14px;          /* Slightly smaller font size */
+    border-radius: 5px;       /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.collapsible:hover {
+    background-color: #6a6a6a; /* Lighter background on hover */
+    transform: scale(1.05);    /* Slight scale effect on hover */
+}
+
+/* Content Style */
+.exercise-content {
+    padding: 15px;             /* Padding inside the content */
+    display: none;             /* Hidden by default */
+    overflow: hidden;          /* Hide overflow */
+    background-color: #222;    /* Darker background for content */
+    color: white;              /* White text */
+    border: 1px solid #444;    /* Border for separation */
+    border-radius: 5px;        /* Rounded corners */
+    margin: 10px auto;        /* Center the content block */
+    max-width: 800px;         /* Max width for content */
+}
+
+/* Math Expressions Style */
+.math-expression {
+    font-family: 'Courier New', monospace; /* Monospace font for math expressions */
+    background-color: #333; /* Background for better visibility */
+    padding: 5px;          /* Padding around the expression */
+    border-radius: 5px;    /* Rounded corners */
+    display: inline-block;  /* Make it inline */
+}
+
+
+
+#email-form {
+    background-color: #1a1a2e; /* Darker form background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    margin: 20px auto;
+    transition: transform 0.3s;
+}
+
+#email-form:hover {
+    transform: scale(1.02);
+}
+
+#email-form input[type="email"],
+#email-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #2e2e42; /* Input background */
+    color: #ffffff; /* Input text color */
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+#email-form input[type="email"]:focus,
+#email-form textarea:focus {
+    border-color: #f39c12; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+#email-form textarea {
+    resize: none; /* Prevents resizing */
+    height: 100px; /* Fixed height */
+}
+
+#email-form button {
+    background-color: #f39c12; /* Button color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#email-form button:hover {
+    background-color: #e67e22; /* Darker button color on hover */
+    transform: scale(1.05);
+}
+
+#questions-section {
+    margin-top: 20px;
+    background-color: #1a1a2e; /* Dark background for questions section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#questions-list {
+    margin-top: 10px;
+    color: #ffffff; /* Text color */
+}
+
+#questions-list p {
+    color: #999; /* Default message color */
+}
+
+#questions-list p.no-questions {
+    color: #f39c12; /* Highlight color for no questions message */
+    font-style: italic; /* Italicize the message */
 }
