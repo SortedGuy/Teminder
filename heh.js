@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Save the state in localStorage
         localStorage.setItem('popupClosed', 'true');
         // Scroll to the math section
-        const mathSection = document.getElementById('test-help');
+        const mathSection = document.getElementById('email-form');
         if (mathSection) {
             mathSection.scrollIntoView({ behavior: 'smooth' });
         }
