@@ -880,3 +880,11 @@ button.prev-day, button.next-day {
     color: #f39c12; /* Highlight color for no questions message */
     font-style: italic; /* Italicize the message */
 }
+.response-image {
+    width: 100%;               /* Make the image responsive */
+    max-width: 100%;            /* Ensure it doesn't exceed container width */
+    height: auto;               /* Maintain the image aspect ratio */
+    display: block;
+    margin: 10px 0;             /* Add margin above and below the image */
+    border-radius: 8px;         /* Optional: rounded image corners */
+}
