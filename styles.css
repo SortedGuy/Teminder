@@ -893,13 +893,14 @@ button.prev-day, button.next-day {
     display: block; 
     margin: 15px auto; 
     width: 100%;  
-    max-width: 70%;  
-    border-radius: 8px; 
+    max-width: 600px;  
+    border-radius: 8px;
 }
 
 
 @media (max-width: 768px) {
     .funni-gif {
-        max-width: 90%; 
+        max-width: 90%;  
     }
 }
+
