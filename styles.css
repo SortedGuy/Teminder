@@ -855,13 +855,13 @@ button.prev-day, button.next-day {
 }
 
 #email-form button:hover {
-    background-color: #e67e22; /* Darker button color on hover */
+    background-color: #e67e22; 
     transform: scale(1.05);
 }
 
 #questions-section {
     margin-top: 20px;
-    background-color: #121212; /* Dark background for questions section */
+    background-color: #121212; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -869,22 +869,29 @@ button.prev-day, button.next-day {
 
 #questions-list {
     margin-top: 10px;
-    color: #ffffff; /* Text color */
+    color: #ffffff; 
 }
 
 #questions-list p {
-    color: #999; /* Default message color */
+    color: #999; 
 }
 
 #questions-list p.no-questions {
-    color: #f39c12; /* Highlight color for no questions message */
-    font-style: italic; /* Italicize the message */
+    color: #f39c12; 
+    font-style: italic; 
 }
 .response-image {
-    width: 100%;               /* Make the image responsive */
-    max-width: 100%;            /* Ensure it doesn't exceed container width */
-    height: auto;               /* Maintain the image aspect ratio */
+    width: 100%;             
+    max-width: 100%;          
+    height: auto;               
     display: block;
-    margin: 10px 0;             /* Add margin above and below the image */
-    border-radius: 8px;         /* Optional: rounded image corners */
+    margin: 10px 0;             
+    border-radius: 8px;         
+}
+
+.funni-gif {
+    display: block; 
+    margin: 20px auto; 
+    max-width: 100%; 
+    border-radius: 8px; 
 }
