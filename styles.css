@@ -891,7 +891,7 @@ button.prev-day, button.next-day {
 
 .funni-gif {
     display: block; 
-    margin: 20px auto; 
-    max-width: 100%; 
+    margin: 15px auto; 
+    max-width: 70%; 
     border-radius: 8px; 
 }
