@@ -889,11 +889,18 @@ button.prev-day, button.next-day {
     border-radius: 8px;         
 }
 
+.response-container {
+    max-width: 600px;  
+    margin: 0 auto;    
+    padding: 15px;
+    text-align: left;
+}
+
 .funni-gif {
     display: block; 
     margin: 15px auto; 
     width: 100%;  
-    max-width: 600px;  
+    max-width: 400px; 
     border-radius: 8px;
 }
 
@@ -903,4 +910,5 @@ button.prev-day, button.next-day {
         max-width: 90%;  
     }
 }
+
 
