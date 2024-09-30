@@ -838,13 +838,13 @@ button.prev-day, button.next-day {
 }
 
 #email-form textarea {
-    resize: none; /* Prevents resizing */
-    height: 100px; /* Fixed height */
+    resize: none; 
+    height: 100px; 
 }
 
 #email-form button {
-    background-color: #f39c12; /* Button color */
-    color: #ffffff; /* Button text color */
+    background-color: #f39c12; 
+    color: #ffffff; 
     border: none;
     padding: 12px 18px;
     border-radius: 5px;
@@ -892,6 +892,14 @@ button.prev-day, button.next-day {
 .funni-gif {
     display: block; 
     margin: 15px auto; 
-    max-width: 70%; 
+    width: 100%;  
+    max-width: 70%;  
     border-radius: 8px; 
+}
+
+
+@media (max-width: 768px) {
+    .funni-gif {
+        max-width: 90%; 
+    }
 }
